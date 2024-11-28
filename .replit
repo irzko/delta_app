@@ -1,0 +1,11 @@
+run = "flutter run -d web-server --web-hostname 0.0.0.0 --web-port 3000"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "flutter run -d web-server --web-hostname 0.0.0.0 --web-port 3000"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
